@@ -2,6 +2,7 @@ import { useState } from 'react';
 import W12MHeader from './W12MHeader';
 import SpeciesName from './speciesName';
 import PlanetName from './planetName';
+import NumberOfBeings from './numberOfBeings'
 
 const W12MForm = () => {
 
@@ -14,7 +15,8 @@ const W12MForm = () => {
 			<W12MHeader />
 			<SpeciesName id = "speciesNameId" type="speciesNameType" speciesName={speciesName} onChangeSpeciesName={(e : any) => setSpeciesName(e.target.value)} />
 			<PlanetName id = "planetNameId" type="planetNameType" planetName={planetName} onChangePlanetName={(e : any) => setPlanetName(e.target.value)} />
-			<SpeciesName id = "speciesNameId" type="SpeciesNameType" speciesName={speciesName} onChangeSpeciesName={(e : any) => setSpeciesName(e.target.value)} />
+			<NumberOfBeings id = "numberOfBeingsId" type="numberOfBeingsType" numberOfBeings={numberOfBeings} onChangeNumberOfBeings={(e : any) => setNumberOfBeings(e.target.value)} />
+			<button>Send</button>
 			{/* REST OF FORM GOES HERE */}
 		</section>
 	);
