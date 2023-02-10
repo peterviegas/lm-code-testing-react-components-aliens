@@ -4,6 +4,7 @@ import SpeciesName from './speciesName';
 import PlanetName from './planetName';
 import NumberOfBeings from './numberOfBeings'
 import SelectTagTwoPlusTwo from './selectTagTwoPlusTwo'
+import ReasonSparing from './reasonSparing'
 
 const W12MForm = () => {
 
@@ -20,6 +21,7 @@ const W12MForm = () => {
 			<PlanetName id = "planetNameId" type="planetNameType" planetName={planetName} onChangePlanetName={(e : any) => setPlanetName(e.target.value)} />
 			<NumberOfBeings id = "numberOfBeingsId" type="numberOfBeingsType" numberOfBeings={numberOfBeings} onChangeNumberOfBeings={(e : any) => setNumberOfBeings(e.target.value)} />
 			<SelectTagTwoPlusTwo id = "selectTagTwoPlusTwoId" selectTagTwoPlusTwo={selectTagTwoPlusTwo} onChangeSelectTagTwoPlusTwo={(newValue: string) => setSelectTagTwoPlusTwo(newValue)} />
+			<ReasonSparing id = "reasonSparing" type="reasonSparingType" reasonSparing={reasonSparing} onChangeReasonSparing={(e : any) => setReasonSparing(e.target.value)} />
 
 			<button>Send</button>
 			{/* REST OF FORM GOES HERE */}
