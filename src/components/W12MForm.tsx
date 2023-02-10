@@ -3,12 +3,15 @@ import W12MHeader from './W12MHeader';
 import SpeciesName from './speciesName';
 import PlanetName from './planetName';
 import NumberOfBeings from './numberOfBeings'
+import SelectTagTwoPlusTwo from './selectTagTwoPlusTwo'
 
 const W12MForm = () => {
 
 	const [speciesName, setSpeciesName] = useState("humans");
   	const [planetName, setPlanetName] = useState("Planet Earth");
   	const [numberOfBeings, setNumberOfBeings] = useState<number>(0);
+	const [selectTagTwoPlusTwo, setSelectTagTwoPlusTwo] = useState<string>('4');
+	const [reasonSparing, setReasonSparing] = useState<string>('');
 
 	return (
 		<section className='w12MForm'>
@@ -16,6 +19,8 @@ const W12MForm = () => {
 			<SpeciesName id = "speciesNameId" type="speciesNameType" speciesName={speciesName} onChangeSpeciesName={(e : any) => setSpeciesName(e.target.value)} />
 			<PlanetName id = "planetNameId" type="planetNameType" planetName={planetName} onChangePlanetName={(e : any) => setPlanetName(e.target.value)} />
 			<NumberOfBeings id = "numberOfBeingsId" type="numberOfBeingsType" numberOfBeings={numberOfBeings} onChangeNumberOfBeings={(e : any) => setNumberOfBeings(e.target.value)} />
+			<SelectTagTwoPlusTwo id = "selectTagTwoPlusTwoId" selectTagTwoPlusTwo={selectTagTwoPlusTwo} onChangeSelectTagTwoPlusTwo={(newValue: string) => setSelectTagTwoPlusTwo(newValue)} />
+
 			<button>Send</button>
 			{/* REST OF FORM GOES HERE */}
 		</section>
