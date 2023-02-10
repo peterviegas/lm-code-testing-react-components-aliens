@@ -13,6 +13,7 @@ const W12MForm = () => {
   	const [numberOfBeings, setNumberOfBeings] = useState<number>(0);
 	const [selectTagTwoPlusTwo, setSelectTagTwoPlusTwo] = useState<string>('4');
 	const [reasonSparing, setReasonSparing] = useState<string>('');
+	const [sendFormW12, setSendFormW12] = useState<boolean>(false);
 
 	return (
 		<section className='w12MForm'>
@@ -23,7 +24,7 @@ const W12MForm = () => {
 			<SelectTagTwoPlusTwo id = "selectTagTwoPlusTwoId" selectTagTwoPlusTwo={selectTagTwoPlusTwo} onChangeSelectTagTwoPlusTwo={(newValue: string) => setSelectTagTwoPlusTwo(newValue)} />
 			<ReasonSparing id = "reasonSparing" type="reasonSparingType" reasonSparing={reasonSparing} onChangeReasonSparing={(e : any) => setReasonSparing(e.target.value)} />
 
-			<button>Send</button>
+			<button type="submit" onClick={()=>{setSendFormW12(true)}}>Send</button>
 			{/* REST OF FORM GOES HERE */}
 		</section>
 	);
