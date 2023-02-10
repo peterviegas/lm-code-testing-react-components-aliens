@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface SpeciesNameProps{
+export interface SpeciesNameProps{
 	id: string;
 	type: string;
 	speciesName: string;
@@ -12,7 +12,7 @@ const SpeciesName : React.FC<SpeciesNameProps> = ( {
 
 	return (
 		<>
-        <label htmlFor={speciesName}>Species Name: </label>
+        <label htmlFor={speciesName}>Species Name:</label>
 		<input id={id} type={type} value={speciesName} onChange={(e) => {
 			onChangeSpeciesName(e.target.value);
 		  }} />

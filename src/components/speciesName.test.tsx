@@ -1,14 +1,18 @@
-import { render } from '@testing-library/react';
-import SpeciesName from './speciesName';
+import {render, fireEvent, screen} from '@testing-library/react'
+import SpeciesName,  {SpeciesNameProps} from './speciesName';
+
+test('renders a SpeciesName', async () => {
+	const onChangeSpeciesNameImplementation = jest.fn(() => "test");
+	const mockSpeciesName: SpeciesNameProps = {
+		id: 'id',
+		type: 'type',
+		speciesName: 'humans',
+		onChangeSpeciesName: onChangeSpeciesNameImplementation
+	}
+	render(<SpeciesName {...mockSpeciesName} />);
+	//const divElement = screen.getByText("humans");
+	expect(screen.getByText('Species Name:')).toBeInTheDocument();
+	expect(screen.getByDisplayValue(mockSpeciesName.speciesName)).toBeInTheDocument();
 
 
-test('renders a SpeciesName', () => {
-	render(<SpeciesName 
-		id = "speciesNameId"
-		 type="speciesNameType"
-		speciesName="humans" 
-		onChangeSpeciesName="humans"n/>);
-	const divElement = screen.getByRole("contentinfo");
-	expect(divElement).toHaveTextContent("humans");
-	expect(divElement).toHaveAttribute("role", "contentinfo");
   });
