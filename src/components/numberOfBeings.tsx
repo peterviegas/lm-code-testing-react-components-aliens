@@ -13,7 +13,7 @@ const NumberOfBeings : React.FC<NumberOfBeingsProps> = ( {
 	return (
 		<>
         <label htmlFor="numberOfBeings">Planet Name: </label>
-		<input id={id} type={type} value={numberOfBeings} onChange={(e) => {
+		<input id={id} type={type} defaultValue={numberOfBeings} onChange={(e) => {
 			onChangeNumberOfBeings(e.target.valueAsNumber);
 		  }} />
 		  </>

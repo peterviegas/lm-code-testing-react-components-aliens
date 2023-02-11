@@ -13,7 +13,7 @@ const ReasonSparing : React.FC<SpeciesNameProps> = ( {
 	return (
 		<>
         <label htmlFor={reasonSparing}>Reason for sparing::</label>
-		<textarea id={id} value={reasonSparing} onChange={(e) => {
+		<textarea id={id} defaultValue={reasonSparing} onChange={(e) => {
 			onChangeReasonSparing(e.target.value);
 		  }} />
 		  </>
