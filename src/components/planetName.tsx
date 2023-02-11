@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface PlanetNameProps{
+export interface PlanetNameProps{
 	id: string;
 	type: string;
 	planetName: string;
@@ -12,7 +12,7 @@ const PlanetName : React.FC<PlanetNameProps> = ( {
 
 	return (
 		<>
-        <label htmlFor={planetName}>Planet Name: </label>
+        <label htmlFor={planetName}>Planet Name:</label>
 		<input id={id} type={type} defaultValue={planetName} onChange={(e) => {
 			onChangePlanetName(e.target.value);
 		  }} />
