@@ -13,7 +13,7 @@ const SpeciesName : React.FC<SpeciesNameProps> = ( {
 	return (
 		<>
         <label htmlFor={speciesName}>Species Name:</label>
-		<input id={id} type={type} value={speciesName} onChange={(e) => {
+		<input id={id} type={type} defaultValue={speciesName} onChange={(e) => {
 			onChangeSpeciesName(e.target.value);
 		  }} />
 		  </>

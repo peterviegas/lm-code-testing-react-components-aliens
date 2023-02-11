@@ -5,6 +5,7 @@ import PlanetName from './planetName';
 import NumberOfBeings from './numberOfBeings'
 import SelectTagTwoPlusTwo from './selectTagTwoPlusTwo'
 import ReasonSparing from './reasonSparing'
+import DisplayData from './displayData';
 
 const W12MForm = () => {
 
@@ -16,17 +17,22 @@ const W12MForm = () => {
 	const [sendFormW12, setSendFormW12] = useState<boolean>(false);
 
 	return (
+		<>
 		<section className='w12MForm'>
 			<W12MHeader />
-			<SpeciesName id = "speciesNameId" type="speciesNameType" speciesName={speciesName} onChangeSpeciesName={(e : any) => setSpeciesName(e.target.value)} />
-			<PlanetName id = "planetNameId" type="planetNameType" planetName={planetName} onChangePlanetName={(e : any) => setPlanetName(e.target.value)} />
-			<NumberOfBeings id = "numberOfBeingsId" type="numberOfBeingsType" numberOfBeings={numberOfBeings} onChangeNumberOfBeings={(e : any) => setNumberOfBeings(e.target.value)} />
+			<SpeciesName id = "speciesNameId" type="text" speciesName={speciesName} onChangeSpeciesName={(e : any) => setSpeciesName(e.target.value)} />
+			<PlanetName id = "planetNameId" type="text" planetName={planetName} onChangePlanetName={(e : any) => setPlanetName(e.target.value)} />
+			<NumberOfBeings id = "numberOfBeingsId" type="text" numberOfBeings={numberOfBeings} onChangeNumberOfBeings={(e : any) => setNumberOfBeings(e.target.value)} />
 			<SelectTagTwoPlusTwo id = "selectTagTwoPlusTwoId" selectTagTwoPlusTwo={selectTagTwoPlusTwo} onChangeSelectTagTwoPlusTwo={(newValue: string) => setSelectTagTwoPlusTwo(newValue)} />
 			<ReasonSparing id = "reasonSparing" type="reasonSparingType" reasonSparing={reasonSparing} onChangeReasonSparing={(e : any) => setReasonSparing(e.target.value)} />
 
 			<button type="submit" onClick={()=>{setSendFormW12(true)}}>Send</button>
 			{/* REST OF FORM GOES HERE */}
 		</section>
+		<article>
+			<DisplayData speciesName={speciesName} planetName={planetName} numberOfBeings={numberOfBeings} selectTagTwoPlusTwo={selectTagTwoPlusTwo} reasonSparing={reasonSparing} sendFormW12={sendFormW12}/>
+		</article>
+		</>
 	);
 };
 
