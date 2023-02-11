@@ -1,11 +1,11 @@
 import React from 'react';
 
-export interface SpeciesNameProps{
+export interface SendFormW12Props{
 	title: string;
 	sendFormW12: boolean;
 }
 
-const SpeciesName : React.FC<SpeciesNameProps> = ( {
+const SendFormW12 : React.FC<SendFormW12Props> = ( {
 	title, sendFormW12, ...props}) => {
 
 	return (
@@ -16,4 +16,4 @@ const SpeciesName : React.FC<SpeciesNameProps> = ( {
     )
 }
 
-export default SpeciesName;
+export default SendFormW12;
