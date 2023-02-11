@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface NumberOfBeingsProps{
+export interface NumberOfBeingsProps{
 	id: string;
 	type: string;
 	numberOfBeings: number;
-	onChangeNumberOfBeings: (speciesName: number) => void;
+	onChangeNumberOfBeings: (numberOfBeings: number) => void;
 }
 
 const NumberOfBeings : React.FC<NumberOfBeingsProps> = ( {
@@ -12,7 +12,7 @@ const NumberOfBeings : React.FC<NumberOfBeingsProps> = ( {
 
 	return (
 		<>
-        <label htmlFor="numberOfBeings">Planet Name: </label>
+        <label htmlFor="numberOfBeings">Number of beings:</label>
 		<input id={id} type={type} defaultValue={numberOfBeings} onChange={(e) => {
 			onChangeNumberOfBeings(e.target.valueAsNumber);
 		  }} />
