@@ -19,11 +19,11 @@ const DisplayData : React.FC<DisplayDataProps> = ( {
 			<>
 			<div>
 				<h1>Display Data</h1>
-				<p><b>{speciesName}</b></p>
-				<p>{planetName}</p>
-				<p>{numberOfBeings}</p>
-				<p>{selectTagTwoPlusTwo}</p>
-				<p>{reasonSparing}</p>
+				<p><b>Species Name:</b> {speciesName}</p>
+				<p><b>Planet Name:</b> {planetName}</p>
+				<p><b>Number of beings:</b> {numberOfBeings}</p>
+				<p><b>What is 2+2?</b> {selectTagTwoPlusTwo}</p>
+				<p><b>Reason for sparing:</b> {reasonSparing}</p>
 	
 			</div>
 			</>
