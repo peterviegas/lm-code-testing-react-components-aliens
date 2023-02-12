@@ -1,6 +1,5 @@
 import {render, fireEvent, screen} from '@testing-library/react'
 import DisplayData,  {DisplayDataProps} from './displayData';
-import  user  from '@testing-library/user-event';
 
 test(`renders a NumberOfBeings ,
 	checks if the name that will appear in the label is equal to Number of beings:`, async () => {
