@@ -5,7 +5,7 @@ export interface PlanetNameProps{
 	id: string;
 	type: string;
 	planetName: string;
-	onChangePlanetName: (speciesName: string) => void;
+	onChangePlanetName: (event:React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const PlanetName : React.FC<PlanetNameProps> = ( {
@@ -29,9 +29,10 @@ const PlanetName : React.FC<PlanetNameProps> = ( {
 		<input id={id} type={type} defaultValue={planetName} onChange={(e) => {
 			const errorMessage = validate(e.target.value);
 			setErrorMessage(errorMessage);
-			onChangePlanetName(e.target.value);
+			onChangePlanetName(e);
 		  }} 
 		  />
+		  <br />
 		  {errorMessage && <ErrorMessage errorMessage={errorMessage}/>}
 		  </>
     )

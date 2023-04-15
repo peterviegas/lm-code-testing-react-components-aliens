@@ -5,7 +5,7 @@ export interface SpeciesNameProps{
 	id: string;
 	type: string;
 	speciesName: string;
-	onChangeSpeciesName: (speciesName: string) => void;
+	onChangeSpeciesName: (event:React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const SpeciesName : React.FC<SpeciesNameProps> = ( {
@@ -26,11 +26,13 @@ const SpeciesName : React.FC<SpeciesNameProps> = ( {
 	return (
 		<>
         <label htmlFor={speciesName}>Species Name:</label>
-		<input id={id} type={type} defaultValue={speciesName} onChange={(e) => {
-			const errorMessage = validate(e.target.value);
-			setErrorMessage(errorMessage);
-			onChangeSpeciesName(e.target.value);
+		<input id={id} type={type} defaultValue={speciesName} 
+			onChange={(e) => {
+				const errorMessage = validate(e.target.value);
+				setErrorMessage(errorMessage);
+				onChangeSpeciesName(e);
 		  }} />
+		  <br />
 		  {errorMessage && <ErrorMessage errorMessage={errorMessage}/>}
 		  </>
     )

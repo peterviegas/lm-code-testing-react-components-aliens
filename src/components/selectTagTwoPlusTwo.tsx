@@ -32,6 +32,7 @@ const SelectTagTwoPlusTwo : React.FC<SelectTagTwoPlusTwoProps> = ( {
 			<option value="4">4</option>
           	<option value="Not 4">Not 4</option>
 		</select>
+		<br />
 		  {errorMessage && <ErrorMessage errorMessage={errorMessage}/>}
 		</>
     )

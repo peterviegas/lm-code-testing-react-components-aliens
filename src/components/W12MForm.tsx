@@ -26,7 +26,7 @@ const W12MForm = () => {
 			<SelectTagTwoPlusTwo id = "selectTagTwoPlusTwoId" selectTagTwoPlusTwo={selectTagTwoPlusTwo} onChangeSelectTagTwoPlusTwo={(newValue: string) => setSelectTagTwoPlusTwo(newValue)} />
 			<ReasonSparing id = "reasonSparing" type="reasonSparingType" reasonSparing={reasonSparing} onChangeReasonSparing={(e : any) => setReasonSparing(e.target.value)} />
 
-			<button type="submit" onClick={()=>{setSendFormW12(true)}}>Send</button>
+			<button type="submit" onClick={()=>{setSendFormW12(true)}}>Submit form</button>
 			{/* REST OF FORM GOES HERE */}
 		</section>
 		<article>

@@ -5,7 +5,7 @@ export interface NumberOfBeingsProps{
 	id: string;
 	type: string;
 	numberOfBeings: number;
-	onChangeNumberOfBeings: (numberOfBeings: number) => void;
+	onChangeNumberOfBeings: (event:React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const NumberOfBeings : React.FC<NumberOfBeingsProps> = ( {
@@ -29,8 +29,9 @@ const NumberOfBeings : React.FC<NumberOfBeingsProps> = ( {
 		<input id={id} type={type} defaultValue={numberOfBeings} onChange={(e) => {
 			const errorMessage = validate(e.target.value);
 			setErrorMessage(errorMessage);
-			onChangeNumberOfBeings(e.target.valueAsNumber);
+			onChangeNumberOfBeings(e);
 		  }} />
+		  <br />
 		  {errorMessage && <ErrorMessage errorMessage={errorMessage}/>}
 		  </>
     )
